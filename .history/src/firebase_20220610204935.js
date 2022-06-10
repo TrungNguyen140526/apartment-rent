@@ -5,10 +5,10 @@ const app = firebase.initializeApp({
     apiKey: REACT_APP_FIREBASE_API_KEY,
     authDomain: REACT_APP_FIREBASE_AUTH_DOMAIN,
     projectId: REACT_APP_FIREBASE_PROJECT_ID,
-    storageBucket: REACT_APP_FIREBASE_STORAGE_BUCKE,
-    messagingSenderId: REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-    appId: REACT_APP_FIREBASE_APP_ID,
-    measurementId: REACT_APP_FIREBASE_APP_ID
+    storageBucket: "sw-architecture-and-design-392.appspot.com",
+    messagingSenderId: "605919037508",
+    appId: "1:605919037508:web:588c25690772bf201ed411",
+    measurementId: "G-B7RE8LW49L"
 })
 
 export const auth = app.auth()
