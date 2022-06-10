@@ -14,16 +14,13 @@ import logo from "../assets/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
 import { useAuth } from "../contexts/AuthContext";
-import { getAuth } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
 const pages = ["Chung cư cho thuê", "Dự án", "Tin tức"];
 const settings = ["Profile", "Logout"];
 
 function Navbar() {
-  const auth = getAuth();
-  const user = auth.currentUser;
-
+  const user = firebase.useAuth
   const [error, setError] = useState(false);
   const { logout } = useAuth();
   const navigate = useNavigate();
@@ -131,7 +128,10 @@ function Navbar() {
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="profile avatar" src={user.photoURL} />
+                  <Avatar
+                    alt= "profile avatar"
+                    src= "photoURL"
+                  />
                 </IconButton>
               </Tooltip>
               <Menu
@@ -151,15 +151,11 @@ function Navbar() {
                 onClose={handleCloseUserMenu}
               >
                 {settings.map((setting) => (
-                  <MenuItem key={setting}>
-                    <Typography textAlign="center">
-                      {setting.match("Profile")}
-                    </Typography>
-                    <Typography textAlign="center" onClick={handleLogout}>
-                      {setting.match("Logout")}
-                    </Typography>
-                  </MenuItem>
-                ))}
+                <MenuItem key={setting}>
+                  <Typography textAlign="center">{setting.match('Profile')}</Typography>
+                  <Typography textAlign="center" onClick={handleLogout}>{setting.match('Logout')}</Typography>
+                </MenuItem>
+              ))}
               </Menu>
             </Box>
           </Toolbar>

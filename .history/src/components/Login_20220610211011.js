@@ -12,11 +12,13 @@ import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { orange } from "@mui/material/colors";
 import logo from "../assets/logo.png";
+
 
 const theme = createTheme({
   palette: {
@@ -25,7 +27,7 @@ const theme = createTheme({
     },
     secondary: {
       main: "#e3d9cf",
-    },
+    }
   },
 });
 
@@ -66,7 +68,7 @@ export default function Login() {
           }}
         >
           <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-            <img src={logo} style={{ width: 80, heigt: 80 }} alt="logo" />
+            <logo />
           </Avatar>
           <Typography component="h1" variant="h5">
             Sign in
@@ -114,7 +116,7 @@ export default function Login() {
               fullWidth
               variant="contained"
               sx={{ mt: 1, mb: 2 }}
-              onClick={signInWithGoogle}
+              onClick = {signInWithGoogle}
             >
               Sign In with Google
             </Button>
