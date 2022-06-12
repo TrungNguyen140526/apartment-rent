@@ -1,0 +1,15 @@
+.form {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 1px black
+}
+
+.profile-imgg{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-work{
+    color: black;
+}
