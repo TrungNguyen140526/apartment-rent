@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 const pages = ["Chung cư cho thuê", "Dự án", "Tin tức"];
 
 function Navbar() {
-  const [ error, setError] = useState(false);
+  const [error, setError] = useState(false);
   const { logout } = useAuth();
   const navigate = useNavigate();
 
