@@ -23,7 +23,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-    <Box>
+      <Box>
         <Router>
           <AuthProvider>
             <Routes>
@@ -33,7 +33,7 @@ function App() {
             </Routes>
           </AuthProvider>
         </Router>
-    </Box>
+      </Box>
     </ThemeProvider>
   )
 }

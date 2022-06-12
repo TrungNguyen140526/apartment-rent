@@ -1,9 +1,14 @@
-import Navbar from "./Navbar";
+import Navbar from "./Navbar"
+import Search from "./Search"
+import SuggestionPage from "./SuggestionPage"
 
 export default function Dashboard() {
+
   return (
-    <div className="App">
-      <Navbar></Navbar>
-    </div>
-  );
+    <>
+      <Navbar />
+      <Search />
+      <SuggestionPage />
+    </>
+  )
 }
