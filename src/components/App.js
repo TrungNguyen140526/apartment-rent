@@ -7,6 +7,8 @@ import Login from "./Login"
 import PrivateRoute from "./PrivateRoute"
 import { createTheme, ThemeProvider } from "@mui/material"
 import { orange } from "@mui/material/colors"
+import Profile from "./Profile"
+import Posting from "./Posting"
 
 const theme = createTheme({
   palette: {
@@ -28,6 +30,8 @@ function App() {
             <Routes>
               <Route path="/" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
               <Route path="/login" element={<Login />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/posting" element={<Posting />} />
             </Routes>
           </AuthProvider>
         </Router>

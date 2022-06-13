@@ -1,0 +1,104 @@
+import { Autocomplete, Grid, TextField, Typography } from "@mui/material";
+import { Box, Container } from "@mui/system";
+import React from "react";
+import Navbar from "./Navbar";
+import "../assets/base.css";
+
+export default function Posting() {
+  const apartmentType = [{ label: "Chung cư" }];
+
+  return (
+    <>
+      <Navbar></Navbar>
+      <Container maxWidth="md" sx={{ marginTop: 6 }}>
+        <Box
+          sx={{
+            height: "100vh",
+            borderRadius: "10px",
+            flexGrow: 1,
+            boxShadow: "0px 1px 10px 1px black",
+          }}
+        >
+          <Typography
+            variant="h3"
+            component="div"
+            gutterBottom
+            align="center"
+            padding={3}
+          >
+            Thông tin cơ bản
+          </Typography>
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <Typography
+                variant="h6"
+                gutterBottom
+                component="div"
+                marginLeft={8}
+              >
+                Loại bất động sản
+              </Typography>
+              <Autocomplete
+                disablePortal
+                id="combo-box-demo"
+                options={apartmentType}
+                sx={{ width: 714, marginLeft: "60px", mt: 2 }}
+                renderInput={(params) => (
+                  <TextField {...params} label="VD: Chung cư" />
+                )}
+              />
+            </Grid>
+            <Grid item xs={6}>
+              <Typography
+                variant="h6"
+                gutterBottom
+                component="div"
+                marginLeft={8}
+              >
+                Tỉnh, thành phố
+              </Typography>
+              <Autocomplete
+                disablePortal
+                id="combo-box-demo"
+                options={apartmentType}
+                sx={{ width: 340, marginLeft: "60px", mt: 2 }}
+                renderInput={(params) => (
+                  <TextField {...params} label="Tỉnh, thành phố" />
+                )}
+              />
+            </Grid>
+            <Grid item xs={6}>
+              <Typography
+                variant="h6"
+                gutterBottom
+                component="div"
+              >
+                Quận, huyện
+              </Typography>
+              <Autocomplete
+                disablePortal
+                id="combo-box-demo"
+                options={apartmentType}
+                sx={{ width: 340, mt: 2 }}
+                renderInput={(params) => (
+                  <TextField {...params} label="Quận, huyện" />
+                )}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <Typography
+                variant="h6"
+                gutterBottom
+                component="div"
+                marginLeft={8}
+              >
+                Địa chỉ hiển thị trên tin đăng
+              </Typography>
+              <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+            </Grid>
+          </Grid>
+        </Box>
+      </Container>
+    </>
+  );
+}

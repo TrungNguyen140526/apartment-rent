@@ -1,0 +1,26 @@
+.form {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 1px black
+}
+
+.profile-imgg{
+    border-radius: 10px;
+    width: 160px;
+    height: 160px;
+}
+
+.worklink {
+    text-decoration: none;
+    color: #333;
+}
+
+.worklink:hover {
+    text-decoration: none;
+    color: #333;
+    opacity: 0.6;
+}
+
+.profile-work{
+    margin-left: 40px;
+}
