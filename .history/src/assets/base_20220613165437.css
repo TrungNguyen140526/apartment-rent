@@ -1,0 +1,12 @@
+.formLabel {
+    margin-left: 60px;
+}
+
+.basicInfo {
+    margin-top: 20px;
+    margin-left: 200px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+
+}
